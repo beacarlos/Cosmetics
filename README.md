@@ -1,5 +1,5 @@
 
-<h1 align="center">Welcome to Cosmetics 🎥 👋</h1>
+<h1 align="center">Welcome to Cosmetics 👋</h1>
 
 > IOS application that purpose to optimize the recommendation of cosmetics.
 
