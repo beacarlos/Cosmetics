@@ -17,6 +17,8 @@
 		774D221824EC76A200021D9B /* ViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D221724EC76A200021D9B /* ViewCollectionViewCell.swift */; };
 		774D221E24EC979A00021D9B /* DescriptionTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D221D24EC979A00021D9B /* DescriptionTagsViewController.swift */; };
 		7754A7C624EAA628004D17CC /* HeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754A7C524EAA628004D17CC /* HeaderTableView.swift */; };
+		775E48D624F1BA75007F0B07 /* ColorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E48D524F1BA75007F0B07 /* ColorsCollectionViewCell.swift */; };
+		775E48D824F1C11F007F0B07 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E48D724F1C11F007F0B07 /* UIColor.swift */; };
 		7770EC4F24EFF6D100F96979 /* DescriptionProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770EC4E24EFF6D100F96979 /* DescriptionProductViewController.swift */; };
 		7770EC5224F00F7A00F96979 /* DescriptionProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770EC5124F00F7A00F96979 /* DescriptionProductView.swift */; };
 		7781BCE924EF827C0048D241 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7781BCE824EF827C0048D241 /* UIImageView.swift */; };
@@ -70,6 +72,8 @@
 		774D221724EC76A200021D9B /* ViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		774D221D24EC979A00021D9B /* DescriptionTagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTagsViewController.swift; sourceTree = "<group>"; };
 		7754A7C524EAA628004D17CC /* HeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableView.swift; sourceTree = "<group>"; };
+		775E48D524F1BA75007F0B07 /* ColorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCollectionViewCell.swift; sourceTree = "<group>"; };
+		775E48D724F1C11F007F0B07 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		7770EC4E24EFF6D100F96979 /* DescriptionProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionProductViewController.swift; sourceTree = "<group>"; };
 		7770EC5124F00F7A00F96979 /* DescriptionProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionProductView.swift; sourceTree = "<group>"; };
 		7781BCE824EF827C0048D241 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				7770EC4E24EFF6D100F96979 /* DescriptionProductViewController.swift */,
+				775E48D524F1BA75007F0B07 /* ColorsCollectionViewCell.swift */,
 			);
 			path = DescriptionProduct;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 				771A2D5024E5B6F9002BD939 /* AutoLayout.swift */,
 				77CACB1B24E6D395001AF54F /* TagsButton.swift */,
 				7781BCE824EF827C0048D241 /* UIImageView.swift */,
+				775E48D724F1C11F007F0B07 /* UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -518,10 +524,12 @@
 				7781BCE924EF827C0048D241 /* UIImageView.swift in Sources */,
 				771A2D5524E5D0E7002BD939 /* TagTableViewCell.swift in Sources */,
 				77A287DA24E573D6009A3B46 /* SceneDelegate.swift in Sources */,
+				775E48D824F1C11F007F0B07 /* UIColor.swift in Sources */,
 				772E872C24ED42DF0017A21C /* DescriptionTagsView.swift in Sources */,
 				7754A7C624EAA628004D17CC /* HeaderTableView.swift in Sources */,
 				774D221824EC76A200021D9B /* ViewCollectionViewCell.swift in Sources */,
 				77CACB1C24E6D395001AF54F /* TagsButton.swift in Sources */,
+				775E48D624F1BA75007F0B07 /* ColorsCollectionViewCell.swift in Sources */,
 				7770EC5224F00F7A00F96979 /* DescriptionProductView.swift in Sources */,
 				772E872E24ED6C4A0017A21C /* DescriptionTagCollectionViewCell.swift in Sources */,
 				7770EC4F24EFF6D100F96979 /* DescriptionProductViewController.swift in Sources */,
