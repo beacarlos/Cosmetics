@@ -9,7 +9,7 @@
 import UIKit
 
 class DescriptionTagsViewController: UIViewController {
-    var tag: String = ""
+    var tag: Tag = Tag(name: "", description: "", image: UIImage(named: "hi"), endpoint: "")
     
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
@@ -26,12 +26,30 @@ class DescriptionTagsViewController: UIViewController {
     
     lazy var descriptionView: DescriptionTagsView = {
         let view = DescriptionTagsView(frame: self.view.frame)
+        view.textDescription.text = tag.description
         return view
     }()
     
+    var result = [Product]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    func callAPI() {
+        Service.shared.findProductByTag(productTags: tag.endpoint) { (produtByTag) in
+            guard let produts = produtByTag else { return }
+            for product in produts {
+                self.result.append(product)
+            }
+        }
+    }
+    
     private func collectionViewLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 10, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 10, right: 20)
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 10
@@ -44,11 +62,12 @@ class DescriptionTagsViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(descriptionView)
         view.addSubview(collectionView)
-        setupSeachController(title: tag)
+        view.backgroundColor = UIColor(red: 0.98, green: 0.94, blue: 0.93, alpha: 1.00)
+        setupSeachController(title: tag.name)
         
+        callAPI()
         NSLayoutConstraint.activate([
-//            collectionView.topAnchor.constraint(equalTo: self.descriptionView.bottomAnchor),
-            collectionView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 4.5/10),
+            collectionView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 6.8/10),
             collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
@@ -58,18 +77,28 @@ class DescriptionTagsViewController: UIViewController {
     
     func setupSeachController(title: String, largeTitle: Bool = true) {
         self.title = title
-        self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
+//        self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
+        navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.94, green: 0.80, blue: 0.80, alpha: 1.00)
+        
     }
 }
 
 extension DescriptionTagsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return result.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionTagCollectionViewCell", for: indexPath) as? DescriptionTagCollectionViewCell else { return DescriptionTagCollectionViewCell() }
+        cell.imageView.downloaded(from: "https:"+result[indexPath.row].apiFeaturedImage!)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let destination = DescriptionProductViewController()
+        let description = result[indexPath.row]
+        destination.descriptionProduct = [description]
+        present(destination, animated: true, completion: nil)
     }
 }

@@ -20,12 +20,12 @@ struct Product: Codable {
     let tagList: [String]
     let apiFeaturedImage: String?
     let productColors: [ProductColor]
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case brand
         case name
-            case productDescription = "description"
+        case productDescription = "description"
         case category
         case productType = "product_type"
         case tagList = "tag_list"
@@ -37,7 +37,7 @@ struct Product: Codable {
 struct ProductColor: Codable {
     let hexValue: String?
     let colourName: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case hexValue = "hex_value"
         case colourName = "colour_name"

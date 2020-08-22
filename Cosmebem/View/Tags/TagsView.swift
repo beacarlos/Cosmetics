@@ -24,6 +24,5 @@ class TagsView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(viewStatusBar)
-        viewBackgroundSearchBar(view: viewStatusBar)
     }
 }

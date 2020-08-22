@@ -9,12 +9,12 @@
 import UIKit
 
 extension UIView {
-    func viewBackgroundSearchBar(view: UIView) {
+    func viewBackgroundSearchBar(view: UIView, constant: CGFloat) {
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: self.topAnchor),
             view.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            view.heightAnchor.constraint(equalToConstant: 200)
+            view.heightAnchor.constraint(equalToConstant: constant)
         ])
     }
 }

@@ -23,6 +23,6 @@ class TrendingsView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(viewStatusBar)
-        viewBackgroundSearchBar(view: viewStatusBar)
+        viewBackgroundSearchBar(view: viewStatusBar, constant: 170)
     }
 }

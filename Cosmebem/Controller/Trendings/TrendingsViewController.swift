@@ -5,40 +5,14 @@
 //  Created by Beatriz Carlos on 13/08/20.
 //  Copyright © 2020 Beatriz Carlos. All rights reserved.
 //
-
 import UIKit
 
 class TrendingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        callAPI()
     }
-    
-    let productTags: [String] = ["Hypoallergenic", "Vegan", "alcohol+free", "Dairy+Free", "oil+free", "cruelty+free", "Non-GMO", "No+Talc"]
-
-    func callAPI() {
-//        Service.shared.findProductByBrand(with: "maybelline", completion: { product in
-//            guard let product = product else { return }
-//            print(product)
-//        })
         
-//        Service.shared.findProductByCategory(productCategory: "powder", productType: "") { product in
-//            guard let product = product else { return }
-//            print(product.count)
-//        }
-        
-//        Service.shared.findProductByType(productType: "blush") { product in
-//            guard let product = product else { return }
-//            print(product.count)
-//        }
-        
-//        Service.shared.findProductByTag(productTags: "Non-GMO") { product in
-//            guard let product = product else { return }
-//            print(product)
-//        }
-    }
-    
     func setupUI() {
         // search controller
         self.view.addSubview(TrendingsView(frame: view.frame))
@@ -49,22 +23,26 @@ class TrendingsViewController: UIViewController {
         self.view.addSubview(trendingsCollectionView)
         self.view.addSubview(topTagsLabel)
         self.view.addSubview(stackTopTags)
+        self.view.addSubview(stackTopTagLabels)
         
         stackTopTags.addArrangedSubview(veganButton)
         stackTopTags.addArrangedSubview(crueltyFreeButton)
         stackTopTags.addArrangedSubview(hypoallergenicButton)
         stackTopTags.addArrangedSubview(oilFreeButton)
         
+        stackTopTagLabels.addArrangedSubview(veganLabel)
+        stackTopTagLabels.addArrangedSubview(crueltyFreeLabel)
+        stackTopTagLabels.addArrangedSubview(hipoallergenicLabel)
+        stackTopTagLabels.addArrangedSubview(oilLabel)
+
         // constraints collection view trendings.
         contraintsTrandingsCollectionView()
     }
     
     // Search controller.
     func setupSeachController(title: String, largeTitle: Bool = true) {
-        let searchController = UISearchController(searchResultsController: nil)
         self.title = title
         self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
-        navigationItem.searchController = searchController
     }
     
     lazy var headerTrendingsCollectionView: UILabel = {
@@ -97,13 +75,53 @@ class TrendingsViewController: UIViewController {
     // Top tags label.
     lazy var topTagsLabel: UILabel = {
         let label = UILabel()
-        label.text = "Top Label"
+        label.text = "Top tags"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
         label.textColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.00)
         return label
     }()
     
+    // Top tags label.
+    lazy var veganLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Vegan"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        label.textColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.00)
+        return label
+    }()
+    
+    // Top tags label.
+    lazy var crueltyFreeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Cruelty Free"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        label.textColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.00)
+        return label
+    }()
+    
+    // Top tags label.
+    lazy var hipoallergenicLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Hypoallergenic"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        label.textColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.00)
+        return label
+    }()
+    
+    // Top tags label.
+    lazy var oilLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Oil Free"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        label.textColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.00)
+        return label
+    }()
+        
     // Stack top tags.
     lazy var stackTopTags: UIStackView = {
         let stackView = UIStackView()
@@ -115,27 +133,66 @@ class TrendingsViewController: UIViewController {
         return stackView
     }()
     
+    // Stack top tags.
+    lazy var stackTopTagLabels: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.spacing = 0
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
     lazy var veganButton: TagsButton = {
         let button = TagsButton(image: UIImage(named: "organic"))
+        button.tag = 1
+        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
         return button
     }()
     
     lazy var crueltyFreeButton: TagsButton = {
         let button = TagsButton(image: UIImage(named: "crueltyfree"))
+        button.tag = 4
+        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
         return button
     }()
     
     lazy var hypoallergenicButton: TagsButton = {
         let button = TagsButton(image: UIImage(named: "hypoalergenic"))
+        button.tag = 0
+        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
         return button
     }()
     
     lazy var oilFreeButton: TagsButton = {
         let button = TagsButton(image: UIImage(named: "oilfree"))
-        //addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
+        button.tag = 3
+        button.addTarget(self, action: #selector(pressed), for: .touchUpInside)
+        
         return button
     }()
     
+    @objc func pressed(sender: UIButton!) {
+        let destination = DescriptionTagsViewController()
+        destination.tag = tags[sender.tag]
+        navigationController?.pushViewController(destination, animated: true)
+    }
+}
+
+extension TrendingsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //        cell.titleLabel.text = titles[indexPath.item]
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrendingsCollectionViewCell", for: indexPath) as? TrendingsCollectionViewCell else { return TrendingsCollectionViewCell() }
+        return cell
+    }
+}
+
+extension TrendingsViewController {
     // Layout collection view trendings.
     func collectionViewLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
@@ -180,17 +237,35 @@ class TrendingsViewController: UIViewController {
             stackTopTags.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             stackTopTags.heightAnchor.constraint(equalToConstant: 90)
         ])
-    }
-}
-
-extension TrendingsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        
+        // Top tags stack view.
+        NSLayoutConstraint.activate([
+            stackTopTagLabels.topAnchor.constraint(equalTo: stackTopTags.bottomAnchor, constant: 16),
+            stackTopTagLabels.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            stackTopTagLabels.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            stackTopTagLabels.heightAnchor.constraint(equalToConstant: 50)
+        ])
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //        cell.titleLabel.text = titles[indexPath.item]
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrendingsCollectionViewCell", for: indexPath) as? TrendingsCollectionViewCell else { return TrendingsCollectionViewCell() }
-        return cell
+    func callAPI() {
+        //        Service.shared.findProductByBrand(with: "maybelline", completion: { product in
+        //            guard let product = product else { return }
+        //            print(product)
+        //        })
+        
+        //        Service.shared.findProductByCategory(productCategory: "powder", productType: "") { product in
+        //            guard let product = product else { return }
+        //            print(product.count)
+        //        }
+        
+        //        Service.shared.findProductByType(productType: "blush") { product in
+        //            guard let product = product else { return }
+        //            print(product.count)
+        //        }
+        
+        //        Service.shared.findProductByTag(productTags: "Non-GMO") { product in
+        //            guard let product = product else { return }
+        //            print(product)
+        //        }
     }
 }

@@ -9,7 +9,6 @@
 import UIKit
 
 class TagsViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSeachController(title: "Tags")
@@ -22,18 +21,17 @@ class TagsViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .none
         tableView.rowHeight = 85
-        //        tableView.allowsSelection = false
+        tableView.showsVerticalScrollIndicator = false
         tableView.register(TagTableViewCell.self, forCellReuseIdentifier: "TagTableViewCell")
         return tableView
     }()
     
     func setupSeachController(title: String, largeTitle: Bool = true) {
-        let searchController = UISearchController(searchResultsController: nil)
         self.title = title
         self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.94, green: 0.80, blue: 0.80, alpha: 1.00)
-        
-        navigationItem.searchController = searchController
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0.63, green: 0.49, blue: 0.48, alpha: 1.00)
+        navigationItem.largeTitleDisplayMode = .always
     }
     
     // Set delegates.
@@ -64,9 +62,8 @@ extension TagsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let tag = tags[indexPath.row].name
         let destination = DescriptionTagsViewController()
-        destination.tag = tag
+        destination.tag = tags[indexPath.row]
         navigationController?.pushViewController(destination, animated: true)
     }
 }
@@ -74,7 +71,7 @@ extension TagsViewController: UITableViewDelegate, UITableViewDataSource {
 extension TagsViewController {
     func tableViewConstraints() {
         NSLayoutConstraint.activate([
-            table.topAnchor.constraint(equalTo: view.topAnchor, constant: 234),
+            table.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
             table.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             table.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             table.bottomAnchor.constraint(equalTo: view.bottomAnchor)

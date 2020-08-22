@@ -9,15 +9,27 @@
 import UIKit
 
 class CosmeticsViewController: UIViewController {
-    let headerTableView: [String] = ["Blush", "Bronzer", "Eyebrow", "Eyeliner", "Foundation",
-                                     "Lip liner", "Lipstick", "Mascara", "Nail polish"]
+    let headerTableView: [String] = ["Blush", "Bronzer", "Eyebrow", "Eyeliner", "Foundation", "Lipstick", "Mascara"]
     
-//    let product_type: [String] = ["blush", "bronzer", "eyebrow", "eyeliner", "eyeshadow", "foundation", "lip_liner", "lipstick", "mascara", "nail_polish"]
-
+    var comestics: [Product] = []
+    
+    func callAPI() {
+        for type in headerTableView {
+            Service.shared.findProductByType(productType: type) { (product) in
+                guard let produt: [Product] = product else {
+                    return
+                }
+                print(produt)
+            }
+        }
+        //        DispatchQueue.main.async {
+        //            self.tableView.reloadData()
+        //        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        callAPI()
-        
+        callAPI()
         view.addSubview(CosmeticsView(frame: view.frame))
         setupSeachController(title: "Cosmetics")
         self.view.addSubview(tableView)

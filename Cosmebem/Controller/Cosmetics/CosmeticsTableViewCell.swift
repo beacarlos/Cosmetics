@@ -72,7 +72,6 @@ extension CosmeticsTableViewCell: UICollectionViewDataSource, UICollectionViewDe
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CosmeticsCollectionViewCell", for: indexPath) as? CosmeticsCollectionViewCell else {
             return CosmeticsCollectionViewCell()
         }
-        
         return cell
     }
     

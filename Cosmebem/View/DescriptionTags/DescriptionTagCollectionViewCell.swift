@@ -9,14 +9,13 @@
 import UIKit
 
 class DescriptionTagCollectionViewCell: UICollectionViewCell {
-    
-        var imageView: UIImageView = {
+    var imageView: UIImageView = {
         var imageView =  UIImageView()
-        imageView.image = UIImage(named: "blush")
+        imageView.image = .none
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        
-        imageView.layer.cornerRadius = 15
+        imageView.backgroundColor = .white
+        imageView.layer.cornerRadius = 5
         imageView.layer.borderColor = UIColor(red: 0.94, green: 0.80, blue: 0.80, alpha: 1.00).cgColor
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -29,8 +28,8 @@ class DescriptionTagCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    override func prepareForReuse() {
-//        imageView.image = .none
+    override func layoutSubviews() {
+        imageView.layer.shadowPath = UIBezierPath(rect: imageView.bounds).cgPath
     }
     
     override init(frame: CGRect) {
