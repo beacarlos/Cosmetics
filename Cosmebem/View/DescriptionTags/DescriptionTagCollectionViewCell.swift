@@ -18,6 +18,7 @@ class DescriptionTagCollectionViewCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 5
         imageView.layer.borderColor = UIColor(red: 0.94, green: 0.80, blue: 0.80, alpha: 1.00).cgColor
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
         
         // shadow
         imageView.layer.shadowColor = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 0.23).cgColor

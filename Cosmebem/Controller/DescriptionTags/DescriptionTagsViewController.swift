@@ -63,7 +63,7 @@ class DescriptionTagsViewController: UIViewController {
         view.addSubview(descriptionView)
         view.addSubview(collectionView)
         view.backgroundColor = UIColor(red: 0.98, green: 0.94, blue: 0.93, alpha: 1.00)
-        setupSeachController(title: tag.name)
+        setupNavigationController(title: tag.name)
         
         callAPI()
         NSLayoutConstraint.activate([
@@ -75,9 +75,8 @@ class DescriptionTagsViewController: UIViewController {
         ])
     }
     
-    func setupSeachController(title: String, largeTitle: Bool = true) {
+    private func setupNavigationController(title: String, largeTitle: Bool = true) {
         self.title = title
-//        self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
         navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.94, green: 0.80, blue: 0.80, alpha: 1.00)
         

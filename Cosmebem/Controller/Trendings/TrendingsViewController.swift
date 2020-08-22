@@ -16,7 +16,7 @@ class TrendingsViewController: UIViewController {
     func setupUI() {
         // search controller
         self.view.addSubview(TrendingsView(frame: view.frame))
-        setupSeachController(title: "Trendings")
+        setupNavigationController(title: "Trendings")
         
         // collection view trendings.
         self.view.addSubview(headerTrendingsCollectionView)
@@ -39,8 +39,8 @@ class TrendingsViewController: UIViewController {
         contraintsTrandingsCollectionView()
     }
     
-    // Search controller.
-    func setupSeachController(title: String, largeTitle: Bool = true) {
+    // Navigation controller.
+    private func setupNavigationController(title: String, largeTitle: Bool = true) {
         self.title = title
         self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
     }

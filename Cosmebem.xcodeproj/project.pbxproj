@@ -175,13 +175,6 @@
 			path = DescriptionTags;
 			sourceTree = "<group>";
 		};
-		7770788C24EEB1D400DFBE5E /* CosmeticsByTag */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CosmeticsByTag;
-			sourceTree = "<group>";
-		};
 		7770EC4D24EFF66300F96979 /* DescriptionProduct */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,7 +269,6 @@
 			isa = PBXGroup;
 			children = (
 				7770EC4D24EFF66300F96979 /* DescriptionProduct */,
-				7770788C24EEB1D400DFBE5E /* CosmeticsByTag */,
 				774D221C24EC96F600021D9B /* DescriptionTags */,
 				77A2881824E577A5009A3B46 /* Tags */,
 				77A2881324E57773009A3B46 /* Cosmetics */,

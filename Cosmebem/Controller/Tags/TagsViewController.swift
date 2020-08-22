@@ -11,7 +11,7 @@ import UIKit
 class TagsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSeachController(title: "Tags")
+        setupNavigationController(title: "Tags")
         view.addSubview(CosmeticsView(frame: view.frame))
         configuretableView()
     }
@@ -26,7 +26,7 @@ class TagsViewController: UIViewController {
         return tableView
     }()
     
-    func setupSeachController(title: String, largeTitle: Bool = true) {
+    private func setupNavigationController(title: String, largeTitle: Bool = true) {
         self.title = title
         self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.94, green: 0.80, blue: 0.80, alpha: 1.00)

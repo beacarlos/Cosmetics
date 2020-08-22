@@ -29,7 +29,7 @@ var tags: [Tag] = [
     
     Tag(name: "Silicone free", description: "Silicones are best known for their occlusive properties, which is a fancy way of saying that they form a barrier-like coating on the skin that’s resistant to both water and air.", image: UIImage(named: "silicone-black"), endpoint: "silicone+free"),
     
-    Tag(name: "Non-trangenic, Non-GMO", description: "Hypoallergenic cosmetics are products that manufacturers claim produce fewer allergic reactions than other cosmetic products. Consumers with hypersensitive skin, and even those with normal skin, may be led to believe that these products will be gentler to their skin than non-hypoallergenic cosmetics.", image: UIImage(named: "non-trangenic-black"), endpoint: "Non-GMO"),
+    Tag(name: "Non-trangenic, Non-GMO", description: "A cosmetic with GMO (Genetically Modified Organisms) ingredients can bring from irritation to the skin the introduction of pesticides in the body.", image: UIImage(named: "non-trangenic-black"), endpoint: "Non-GMO"),
     
     Tag(name: "No talc", description: "Talcum of dubious origin can be harmful to health, as it may contain asbestos, which is a known carcinogen.", image: UIImage(named: "no-talc-black"), endpoint: "No+Talc")
 ]

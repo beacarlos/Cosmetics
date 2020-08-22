@@ -8,41 +8,53 @@
 
 import UIKit
 
-class DescriptionProductViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class DescriptionProductViewController: UIViewController {
     var descriptionProduct = [Product]()
-    var colors: [UIColor] = []
+    private var colors: [UIColor] = []
     
-    lazy var viewB: DescriptionProductView =  {
+    fileprivate lazy var viewDescriptionProduct: DescriptionProductView =  {
         let view = DescriptionProductView(frame: self.view.frame)
-        view.imageView.downloaded(from: "https:" + descriptionProduct[0].apiFeaturedImage!)
-        view.titleLabel.text = descriptionProduct[0].name!
-        let textD = descriptionProduct[0].productDescription!
-        view.textDescription.text = textD.count > 547 ? String(textD.prefix(547)) : textD
-        view.brandLabel.text = descriptionProduct[0].brand!
         return view
     }()
     
-    func hexToUIColor() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        view.addSubview(viewDescriptionProduct)
+        hexToUIColor()
+        setDelegatesCollectionView()
+        configureView()
+    }
+    
+    func setDelegatesCollectionView() {
+        viewDescriptionProduct.collectionView.delegate = self
+        viewDescriptionProduct.collectionView.dataSource = self
+    }
+    
+    private func hexToUIColor() {
         for color in descriptionProduct[0].productColors {
             colors.append(UIColor(hex: color.hexValue!)!)
         }
         
         if colors.isEmpty {
-            viewB.colorLabel.isHidden = true
-            viewB.collectionView.isHidden = true
+            viewDescriptionProduct.colorLabel.isHidden = true
+            viewDescriptionProduct.collectionView.isHidden = true
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        view.addSubview(viewB)
-        hexToUIColor()
-        //collectio view
-        viewB.collectionView.delegate = self
-        viewB.collectionView.dataSource = self
+    private func configureView() {
+        viewDescriptionProduct.imageView.downloaded(from: "https:" + descriptionProduct[0].apiFeaturedImage!)
+        viewDescriptionProduct.titleLabel.text = descriptionProduct[0].name!
+        
+        let textD = descriptionProduct[0].productDescription!
+        viewDescriptionProduct.textDescription.text = textD.count > 547 ? String(textD.prefix(547)) : textD
+        
+        viewDescriptionProduct.brandLabel.text = descriptionProduct[0].brand!
+
     }
-    
+}
+
+extension DescriptionProductViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colors.count
     }

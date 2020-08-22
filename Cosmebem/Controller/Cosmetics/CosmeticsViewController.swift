@@ -31,7 +31,7 @@ class CosmeticsViewController: UIViewController {
         super.viewDidLoad()
         callAPI()
         view.addSubview(CosmeticsView(frame: view.frame))
-        setupSeachController(title: "Cosmetics")
+        setupNavigationController(title: "Cosmetics")
         self.view.addSubview(tableView)
         tableView.register(CosmeticsTableViewCell.self, forCellReuseIdentifier: "CosmeticsTableViewCell")
         NSLayoutConstraint.activate([
@@ -53,7 +53,7 @@ class CosmeticsViewController: UIViewController {
         return tableView
     }()
     
-    func setupSeachController(title: String, largeTitle: Bool = true) {
+    func setupNavigationController(title: String, largeTitle: Bool = true) {
         let searchController = UISearchController(searchResultsController: nil)
         self.title = title
         self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
