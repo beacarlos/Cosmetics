@@ -11,6 +11,7 @@ import UIKit
 class DescriptionCosmeticsViewController: UIViewController {
     var tag: String = ""
     var findCategorie: String = ""
+    var descriptionProductType: String = ""
     
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
@@ -27,6 +28,7 @@ class DescriptionCosmeticsViewController: UIViewController {
     
     lazy var descriptionView: DescriptionTagsView = {
         let view = DescriptionTagsView(frame: self.view.frame)
+        view.textDescription.text = descriptionProductType
         return view
     }()
     

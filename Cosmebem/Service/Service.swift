@@ -5,7 +5,7 @@
 //  Created by Beatriz Carlos on 18/08/20.
 //  Copyright © 2020 Beatriz Carlos. All rights reserved.
 //
-
+// swiftlint:disable identifier_name
 import Foundation
 import UIKit
 
@@ -85,6 +85,26 @@ class Service {
             }
             do {
                 let results = try JSONDecoder().decode([Product].self, from: data)
+                completion(results)
+
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    func findProductByID(id: String, completion: @escaping (Product?) -> Void) {
+        let api = MakeupAPI(route: .findProduct(id: id))
+        
+        //unwranping
+        guard let url = api.url else { return }
+        HTTP.get.request(url: url) { (data, _ response, error) in
+            guard let data = data else {
+                completion(nil)
+                return
+            }
+            do {
+                let results = try JSONDecoder().decode(Product.self, from: data)
                 completion(results)
 
             } catch {

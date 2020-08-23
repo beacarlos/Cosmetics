@@ -44,6 +44,7 @@
 		77B8304224EC1044003E99A8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8304124EC1044003E99A8 /* Product.swift */; };
 		77CACB1C24E6D395001AF54F /* TagsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CACB1B24E6D395001AF54F /* TagsButton.swift */; };
 		77CBBBB724E611C90061CB29 /* TrendingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBBBB624E611C90061CB29 /* TrendingsCollectionViewCell.swift */; };
+		77EB928C24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB928B24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		77B8304124EC1044003E99A8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		77CACB1B24E6D395001AF54F /* TagsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsButton.swift; sourceTree = "<group>"; };
 		77CBBBB624E611C90061CB29 /* TrendingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingsCollectionViewCell.swift; sourceTree = "<group>"; };
+		77EB928B24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatgeoriesCosmetics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 			children = (
 				77A2880C24E5745B009A3B46 /* Tag.swift */,
 				77B8304124EC1044003E99A8 /* Product.swift */,
+				77EB928B24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				77CBBBB724E611C90061CB29 /* TrendingsCollectionViewCell.swift in Sources */,
 				774D221E24EC979A00021D9B /* DescriptionTagsViewController.swift in Sources */,
 				77B8303C24EBED3E003E99A8 /* Router.swift in Sources */,
+				77EB928C24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift in Sources */,
 				77B8304024EC0E75003E99A8 /* Service.swift in Sources */,
 				77A2880D24E5745B009A3B46 /* Tag.swift in Sources */,
 				77A287D824E573D6009A3B46 /* AppDelegate.swift in Sources */,

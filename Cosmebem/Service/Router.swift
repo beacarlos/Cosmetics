@@ -6,6 +6,7 @@
 //  Copyright © 2020 Beatriz Carlos. All rights reserved.
 //
 
+// swiftlint:disable identifier_name
 import Foundation
 
 enum Router {
@@ -13,10 +14,12 @@ enum Router {
     case productCategory(productCategory: String, productType: String = "")
     case productType(productType: String)
     case productTags(productTags: String, productType: String = "")
+    case findProduct(id: String)
 }
 
 struct MakeupAPI {
     let hostname: String = "http://makeup-api.herokuapp.com/api/v1/products.json?"
+    let hostNameFind: String = "http://makeup-api.herokuapp.com/api/v1/products/"
     let imageHostname: String = "http://s3.amazonaws.com/donovanbailey/products/api_featured_images/000/001/"
     
     var route: Router
@@ -34,6 +37,9 @@ struct MakeupAPI {
             
         case .productTags(let productTags, let productType):
             return URL(string: "\(hostname)product_tags=\(productTags)&product_type=\(productType)")
+            
+        case .findProduct(let id):
+            return URL(string: "\(hostNameFind)\(id).json")
         }
     }
 }

@@ -60,6 +60,7 @@ class TrendingsCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         label.textColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.00)
+        label.numberOfLines = 3
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Dior"
         return label
@@ -69,7 +70,7 @@ class TrendingsCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "blush")
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
+        imageView.backgroundColor = .white
         //round only specific corners.
         imageView.layer.cornerRadius = 15
         imageView.layer.maskedCorners =  [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
@@ -135,7 +136,8 @@ class TrendingsCollectionViewCell: UICollectionViewCell {
         
         NSLayoutConstraint.activate([
             brandLabel.topAnchor.constraint(equalTo: cosmeticLabel.bottomAnchor, constant: 16),
-            brandLabel.leadingAnchor.constraint(equalTo: roundedBackgroundView.leadingAnchor, constant: 16)
+            brandLabel.leadingAnchor.constraint(equalTo: roundedBackgroundView.leadingAnchor, constant: 16),
+            brandLabel.trailingAnchor.constraint(equalTo: cosmeticImage.leadingAnchor, constant: -16)
         ])
         
         NSLayoutConstraint.activate([

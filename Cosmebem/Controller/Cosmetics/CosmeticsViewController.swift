@@ -9,9 +9,7 @@
 import UIKit
 
 class CosmeticsViewController: UIViewController {
-    let categories: [String] = ["Blush", "Bronzer", "Eyebrow", "Eyeliner", "Foundation", "Lipstick", "Mascara"]
-    let findName: [String] = ["blush", "bronzer", "eyebrow", "eyeliner", "foundation", "lipstick", "mascara"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationController(title: "Cosmetics")
@@ -67,6 +65,7 @@ extension CosmeticsViewController: UITableViewDelegate, UITableViewDataSource {
         let destination = DescriptionCosmeticsViewController()
         destination.tag = categories[indexPath.row]
         destination.findCategorie = findName[indexPath.row]
+        destination.descriptionProductType = descriptionType[indexPath.row]
         navigationController?.pushViewController(destination, animated: true)
     }
 }

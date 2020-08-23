@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import Cosmebem
 
 class CosmebemUITests: XCTestCase {
 
