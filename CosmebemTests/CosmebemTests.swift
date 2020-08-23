@@ -53,4 +53,15 @@ class CosmebemTests: XCTestCase {
         
         wait(for: [expect], timeout: 5)
     }
+    
+    func test_route_productByIdRoute_productById() {
+        let url = URL(string: "http://makeup-api.herokuapp.com/api/v1/products/90.json")
+        let expect = expectation(description: "getting all product by id.")
+        guard let urlMakeupAPI: URL = MakeupAPI(route: Router.findProduct(id: "90")).url else {return}
+        XCTAssertEqual(url, urlMakeupAPI)
+        expect.fulfill()
+        //Async
+        
+        wait(for: [expect], timeout: 5)
+    }
 }

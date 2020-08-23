@@ -9,7 +9,7 @@
 import UIKit
 
 class DescriptionCosmeticsCollectionViewCell: UICollectionViewCell {
-    var imageView: UIImageView = {
+    public var imageView: UIImageView = {
         var imageView =  UIImageView()
         imageView.image = .none
         imageView.contentMode = .scaleAspectFill
@@ -43,7 +43,7 @@ class DescriptionCosmeticsCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureImageViewConstraints() {
+    private func configureImageViewConstraints() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         imageView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true

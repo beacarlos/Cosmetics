@@ -14,7 +14,6 @@
 		772E872C24ED42DF0017A21C /* DescriptionTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E872B24ED42DF0017A21C /* DescriptionTagsView.swift */; };
 		772E872E24ED6C4A0017A21C /* DescriptionTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E872D24ED6C4A0017A21C /* DescriptionTagCollectionViewCell.swift */; };
 		774D221624EC63DC00021D9B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 774D221524EC63DC00021D9B /* .swiftlint.yml */; };
-		774D221824EC76A200021D9B /* ViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D221724EC76A200021D9B /* ViewCollectionViewCell.swift */; };
 		774D221E24EC979A00021D9B /* DescriptionTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D221D24EC979A00021D9B /* DescriptionTagsViewController.swift */; };
 		7756594B24F1F16E001E6A0A /* CosmeticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7756594A24F1F16E001E6A0A /* CosmeticsTableViewCell.swift */; };
 		7756594E24F1FBA2001E6A0A /* DescriptionCosmeticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7756594D24F1FBA2001E6A0A /* DescriptionCosmeticsViewController.swift */; };
@@ -42,7 +41,6 @@
 		77B8303E24EBFDA8003E99A8 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8303D24EBFDA8003E99A8 /* HTTP.swift */; };
 		77B8304024EC0E75003E99A8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8303F24EC0E75003E99A8 /* Service.swift */; };
 		77B8304224EC1044003E99A8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8304124EC1044003E99A8 /* Product.swift */; };
-		77CACB1C24E6D395001AF54F /* TagsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CACB1B24E6D395001AF54F /* TagsButton.swift */; };
 		77CBBBB724E611C90061CB29 /* TrendingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBBBB624E611C90061CB29 /* TrendingsCollectionViewCell.swift */; };
 		77EB928C24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB928B24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +70,6 @@
 		772E872B24ED42DF0017A21C /* DescriptionTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTagsView.swift; sourceTree = "<group>"; };
 		772E872D24ED6C4A0017A21C /* DescriptionTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		774D221524EC63DC00021D9B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		774D221724EC76A200021D9B /* ViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		774D221D24EC979A00021D9B /* DescriptionTagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTagsViewController.swift; sourceTree = "<group>"; };
 		7756594A24F1F16E001E6A0A /* CosmeticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmeticsTableViewCell.swift; sourceTree = "<group>"; };
 		7756594D24F1FBA2001E6A0A /* DescriptionCosmeticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCosmeticsViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +103,6 @@
 		77B8303D24EBFDA8003E99A8 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		77B8303F24EC0E75003E99A8 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		77B8304124EC1044003E99A8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		77CACB1B24E6D395001AF54F /* TagsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsButton.swift; sourceTree = "<group>"; };
 		77CBBBB624E611C90061CB29 /* TrendingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingsCollectionViewCell.swift; sourceTree = "<group>"; };
 		77EB928B24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatgeoriesCosmetics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +137,6 @@
 			children = (
 				771A2D4E24E5B621002BD939 /* TagsView.swift */,
 				771A2D5424E5D0E7002BD939 /* TagTableViewCell.swift */,
-				774D221724EC76A200021D9B /* ViewCollectionViewCell.swift */,
 			);
 			path = Tags;
 			sourceTree = "<group>";
@@ -288,7 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				771A2D5024E5B6F9002BD939 /* AutoLayout.swift */,
-				77CACB1B24E6D395001AF54F /* TagsButton.swift */,
 				7781BCE824EF827C0048D241 /* UIImageView.swift */,
 				775E48D724F1C11F007F0B07 /* UIColor.swift */,
 			);
@@ -554,8 +548,6 @@
 				775E48D824F1C11F007F0B07 /* UIColor.swift in Sources */,
 				772E872C24ED42DF0017A21C /* DescriptionTagsView.swift in Sources */,
 				7756594E24F1FBA2001E6A0A /* DescriptionCosmeticsViewController.swift in Sources */,
-				774D221824EC76A200021D9B /* ViewCollectionViewCell.swift in Sources */,
-				77CACB1C24E6D395001AF54F /* TagsButton.swift in Sources */,
 				775E48D624F1BA75007F0B07 /* ColorsCollectionViewCell.swift in Sources */,
 				7770EC5224F00F7A00F96979 /* DescriptionProductView.swift in Sources */,
 				775E48DB24F1D611007F0B07 /* TagsCollectionViewCell.swift in Sources */,

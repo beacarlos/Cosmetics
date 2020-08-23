@@ -9,7 +9,7 @@
 import UIKit
 
 class DescriptionComesticsView: UIView {
-    lazy var viewDescription: UIView = {
+    private lazy var viewDescription: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 0.94, green: 0.80, blue: 0.80, alpha: 1.00)
         view.layer.cornerRadius = 15
@@ -24,9 +24,8 @@ class DescriptionComesticsView: UIView {
         return view
     }()
     
-    lazy var textDescription: UITextView = {
+    private lazy var textDescription: UITextView = {
         let text = UITextView()
-        text.text = "The blush can restore naturalness to a skin that has been worked with foundation, concealer and powder. Blush can also be used to shape the face, enhance the bone structure and its best features."
         text.textColor = .black
         text.isEditable = false
         text.backgroundColor = .none
@@ -48,7 +47,7 @@ class DescriptionComesticsView: UIView {
         autoLayout()
     }
     
-    func autoLayout() {
+    private func autoLayout() {
         NSLayoutConstraint.activate([
             viewDescription.topAnchor.constraint(equalTo: self.topAnchor),
             viewDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor),

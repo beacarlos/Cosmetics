@@ -9,14 +9,14 @@
 import UIKit
 
 class CosmeticsView: UIView {
-    lazy var viewStatusBar: UIView = {
+    private lazy var viewStatusBar: UIView = {
         let viewStatusBar = UIView()
         viewStatusBar.backgroundColor = UIColor(red: 0.94, green: 0.80, blue: 0.80, alpha: 1.00)
         viewStatusBar.translatesAutoresizingMaskIntoConstraints = false
         return viewStatusBar
     }()
     
-    let table: UITableView = {
+    private let table: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .none
@@ -38,7 +38,7 @@ class CosmeticsView: UIView {
         viewBackgroundSearchBar(view: viewStatusBar, constant: 170)
     }
     
-    func autoLayout() {
+    private func autoLayout() {
         NSLayoutConstraint.activate([
             table.topAnchor.constraint(equalTo: self.topAnchor, constant: 200),
             table.leadingAnchor.constraint(equalTo: self.leadingAnchor),
