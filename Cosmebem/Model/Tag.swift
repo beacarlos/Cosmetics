@@ -23,7 +23,7 @@ var tags: [Tag] = [
     
     Tag(name: "Alcohol free", description: "Some consumers select alcohol free products because they believe ethyl alcohol dries out their skin or hair.In cosmetic labeling, the term alcohol, used by itself, refers to ethyl alcohol.", image: UIImage(named: "alcohol-black"), endpoint: "alcohol+free"),
     
-    Tag(name: "Oil free", description: "Oil-free cosmetics are products that do not contain ingredients which are greasy. Typically, the list of excluded ingredients is: petrolatum, lanolin, stearic acid, and isopropyl esters. Removing these key ingredients reduce the overall oiliness of the product, reducing the chance that it causes the pores to clog.", image: UIImage(named: "oil-black"), endpoint: "oil+free"),
+    Tag(name: "Oil free", description: "Oil-free cosmetics are products that do not contain fatty ingredients. The removal reduces the overall oiliness of the product, reducing the chance of pore clogging.", image: UIImage(named: "oil-black"), endpoint: "oil+free"),
     
     Tag(name: "Cruelty free", description: "In the animal rights movement, cruelty-free is a label for products or activities that do not harm or kill animals anywhere in the world. Products tested on animals or made from animals are not considered cruelty-free, since these tests are often painful and cause the suffering and death of millions of animals every year.", image: UIImage(named: "cruelty-black"), endpoint: "cruelty+free"),
     
