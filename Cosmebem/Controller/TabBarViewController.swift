@@ -30,8 +30,8 @@ class TabBarViewController: UITabBarController {
         let tags = UINavigationController(rootViewController: TagsViewController())
         tags.tabBarItem = UITabBarItem(title: "Tags", image: UIImage(systemName: "tag.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)), tag: 1)
         
-        //        viewControllers = [trendings, cosmetics, tags]
-        viewControllers = [trendings, tags]
+        viewControllers = [trendings, cosmetics, tags]
+//        viewControllers = [trendings, tags]
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

@@ -16,15 +16,16 @@
 		774D221624EC63DC00021D9B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 774D221524EC63DC00021D9B /* .swiftlint.yml */; };
 		774D221824EC76A200021D9B /* ViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D221724EC76A200021D9B /* ViewCollectionViewCell.swift */; };
 		774D221E24EC979A00021D9B /* DescriptionTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D221D24EC979A00021D9B /* DescriptionTagsViewController.swift */; };
-		7754A7C624EAA628004D17CC /* HeaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754A7C524EAA628004D17CC /* HeaderTableView.swift */; };
+		7756594B24F1F16E001E6A0A /* CosmeticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7756594A24F1F16E001E6A0A /* CosmeticsTableViewCell.swift */; };
+		7756594E24F1FBA2001E6A0A /* DescriptionCosmeticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7756594D24F1FBA2001E6A0A /* DescriptionCosmeticsViewController.swift */; };
+		7756595124F1FC4F001E6A0A /* DescriptionCosmeticsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7756595024F1FC4F001E6A0A /* DescriptionCosmeticsCollectionViewCell.swift */; };
+		7756595324F1FC9B001E6A0A /* DescriptionComesticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7756595224F1FC9B001E6A0A /* DescriptionComesticsView.swift */; };
 		775E48D624F1BA75007F0B07 /* ColorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E48D524F1BA75007F0B07 /* ColorsCollectionViewCell.swift */; };
 		775E48D824F1C11F007F0B07 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E48D724F1C11F007F0B07 /* UIColor.swift */; };
 		775E48DB24F1D611007F0B07 /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E48DA24F1D611007F0B07 /* TagsCollectionViewCell.swift */; };
 		7770EC4F24EFF6D100F96979 /* DescriptionProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770EC4E24EFF6D100F96979 /* DescriptionProductViewController.swift */; };
 		7770EC5224F00F7A00F96979 /* DescriptionProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7770EC5124F00F7A00F96979 /* DescriptionProductView.swift */; };
 		7781BCE924EF827C0048D241 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7781BCE824EF827C0048D241 /* UIImageView.swift */; };
-		779A92F724E897F900CC7E76 /* CosmeticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A92F624E897F900CC7E76 /* CosmeticsTableViewCell.swift */; };
-		779A92F924E89C1D00CC7E76 /* CosmeticsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A92F824E89C1D00CC7E76 /* CosmeticsCollectionViewCell.swift */; };
 		77A287D824E573D6009A3B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A287D724E573D6009A3B46 /* AppDelegate.swift */; };
 		77A287DA24E573D6009A3B46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A287D924E573D6009A3B46 /* SceneDelegate.swift */; };
 		77A287E124E573D8009A3B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77A287E024E573D8009A3B46 /* Assets.xcassets */; };
@@ -72,15 +73,16 @@
 		774D221524EC63DC00021D9B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		774D221724EC76A200021D9B /* ViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		774D221D24EC979A00021D9B /* DescriptionTagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTagsViewController.swift; sourceTree = "<group>"; };
-		7754A7C524EAA628004D17CC /* HeaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableView.swift; sourceTree = "<group>"; };
+		7756594A24F1F16E001E6A0A /* CosmeticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmeticsTableViewCell.swift; sourceTree = "<group>"; };
+		7756594D24F1FBA2001E6A0A /* DescriptionCosmeticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCosmeticsViewController.swift; sourceTree = "<group>"; };
+		7756595024F1FC4F001E6A0A /* DescriptionCosmeticsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCosmeticsCollectionViewCell.swift; sourceTree = "<group>"; };
+		7756595224F1FC9B001E6A0A /* DescriptionComesticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionComesticsView.swift; sourceTree = "<group>"; };
 		775E48D524F1BA75007F0B07 /* ColorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCollectionViewCell.swift; sourceTree = "<group>"; };
 		775E48D724F1C11F007F0B07 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		775E48DA24F1D611007F0B07 /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		7770EC4E24EFF6D100F96979 /* DescriptionProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionProductViewController.swift; sourceTree = "<group>"; };
 		7770EC5124F00F7A00F96979 /* DescriptionProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionProductView.swift; sourceTree = "<group>"; };
 		7781BCE824EF827C0048D241 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		779A92F624E897F900CC7E76 /* CosmeticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmeticsTableViewCell.swift; sourceTree = "<group>"; };
-		779A92F824E89C1D00CC7E76 /* CosmeticsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmeticsCollectionViewCell.swift; sourceTree = "<group>"; };
 		77A287D424E573D6009A3B46 /* Cosmebem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cosmebem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A287D724E573D6009A3B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77A287D924E573D6009A3B46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,8 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				771A2D4C24E5B618002BD939 /* CosmeticsView.swift */,
-				779A92F824E89C1D00CC7E76 /* CosmeticsCollectionViewCell.swift */,
-				7754A7C524EAA628004D17CC /* HeaderTableView.swift */,
+				7756594A24F1F16E001E6A0A /* CosmeticsTableViewCell.swift */,
 			);
 			path = Cosmetics;
 			sourceTree = "<group>";
@@ -175,6 +176,23 @@
 				774D221D24EC979A00021D9B /* DescriptionTagsViewController.swift */,
 			);
 			path = DescriptionTags;
+			sourceTree = "<group>";
+		};
+		7756594C24F1FB7E001E6A0A /* DescriptionCosmetics */ = {
+			isa = PBXGroup;
+			children = (
+				7756594D24F1FBA2001E6A0A /* DescriptionCosmeticsViewController.swift */,
+			);
+			path = DescriptionCosmetics;
+			sourceTree = "<group>";
+		};
+		7756594F24F1FC12001E6A0A /* DescriptionComestics */ = {
+			isa = PBXGroup;
+			children = (
+				7756595024F1FC4F001E6A0A /* DescriptionCosmeticsCollectionViewCell.swift */,
+				7756595224F1FC9B001E6A0A /* DescriptionComesticsView.swift */,
+			);
+			path = DescriptionComestics;
 			sourceTree = "<group>";
 		};
 		775E48D924F1D604007F0B07 /* TagsCollectionViewCell */ = {
@@ -278,6 +296,7 @@
 		77A2880924E57415009A3B46 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7756594C24F1FB7E001E6A0A /* DescriptionCosmetics */,
 				7770EC4D24EFF66300F96979 /* DescriptionProduct */,
 				774D221C24EC96F600021D9B /* DescriptionTags */,
 				77A2881824E577A5009A3B46 /* Tags */,
@@ -291,6 +310,7 @@
 		77A2880A24E57423009A3B46 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7756594F24F1FC12001E6A0A /* DescriptionComestics */,
 				7770EC5024F00F6100F96979 /* DescriptionProduct */,
 				772E872A24ED42BF0017A21C /* DescriptionTags */,
 				771A2D4B24E5B602002BD939 /* Cosmetics */,
@@ -322,7 +342,6 @@
 		77A2881324E57773009A3B46 /* Cosmetics */ = {
 			isa = PBXGroup;
 			children = (
-				779A92F624E897F900CC7E76 /* CosmeticsTableViewCell.swift */,
 				77A2881424E5778A009A3B46 /* CosmeticsViewController.swift */,
 			);
 			path = Cosmetics;
@@ -509,11 +528,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A2881D24E58848009A3B46 /* TrendingsView.swift in Sources */,
-				779A92F724E897F900CC7E76 /* CosmeticsTableViewCell.swift in Sources */,
 				77A2880F24E5757A009A3B46 /* TabBarViewController.swift in Sources */,
-				779A92F924E89C1D00CC7E76 /* CosmeticsCollectionViewCell.swift in Sources */,
+				7756595324F1FC9B001E6A0A /* DescriptionComesticsView.swift in Sources */,
 				77A2881224E57761009A3B46 /* TrendingsViewController.swift in Sources */,
 				77B8304224EC1044003E99A8 /* Product.swift in Sources */,
+				7756595124F1FC4F001E6A0A /* DescriptionCosmeticsCollectionViewCell.swift in Sources */,
 				77B8303E24EBFDA8003E99A8 /* HTTP.swift in Sources */,
 				77CBBBB724E611C90061CB29 /* TrendingsCollectionViewCell.swift in Sources */,
 				774D221E24EC979A00021D9B /* DescriptionTagsViewController.swift in Sources */,
@@ -521,6 +540,7 @@
 				77B8304024EC0E75003E99A8 /* Service.swift in Sources */,
 				77A2880D24E5745B009A3B46 /* Tag.swift in Sources */,
 				77A287D824E573D6009A3B46 /* AppDelegate.swift in Sources */,
+				7756594B24F1F16E001E6A0A /* CosmeticsTableViewCell.swift in Sources */,
 				77A2881A24E577AF009A3B46 /* TagsViewController.swift in Sources */,
 				771A2D4D24E5B618002BD939 /* CosmeticsView.swift in Sources */,
 				771A2D5124E5B6F9002BD939 /* AutoLayout.swift in Sources */,
@@ -529,7 +549,7 @@
 				77A287DA24E573D6009A3B46 /* SceneDelegate.swift in Sources */,
 				775E48D824F1C11F007F0B07 /* UIColor.swift in Sources */,
 				772E872C24ED42DF0017A21C /* DescriptionTagsView.swift in Sources */,
-				7754A7C624EAA628004D17CC /* HeaderTableView.swift in Sources */,
+				7756594E24F1FBA2001E6A0A /* DescriptionCosmeticsViewController.swift in Sources */,
 				774D221824EC76A200021D9B /* ViewCollectionViewCell.swift in Sources */,
 				77CACB1C24E6D395001AF54F /* TagsButton.swift in Sources */,
 				775E48D624F1BA75007F0B07 /* ColorsCollectionViewCell.swift in Sources */,

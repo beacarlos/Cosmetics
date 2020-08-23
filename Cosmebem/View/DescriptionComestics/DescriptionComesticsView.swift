@@ -1,14 +1,14 @@
 //
-//  DescriptionTagsView.swift
+//  DescriptionComesticsView.swift
 //  Cosmebem
 //
-//  Created by Beatriz Carlos on 19/08/20.
+//  Created by Beatriz Carlos on 22/08/20.
 //  Copyright © 2020 Beatriz Carlos. All rights reserved.
 //
 
 import UIKit
 
-class DescriptionTagsView: UIView {
+class DescriptionComesticsView: UIView {
     lazy var viewDescription: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 0.94, green: 0.80, blue: 0.80, alpha: 1.00)
@@ -26,7 +26,7 @@ class DescriptionTagsView: UIView {
     
     lazy var textDescription: UITextView = {
         let text = UITextView()
-        text.text = ""
+        text.text = "The blush can restore naturalness to a skin that has been worked with foundation, concealer and powder. Blush can also be used to shape the face, enhance the bone structure and its best features."
         text.textColor = .black
         text.isEditable = false
         text.backgroundColor = .none
@@ -55,7 +55,7 @@ class DescriptionTagsView: UIView {
             viewDescription.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             viewDescription.heightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.heightAnchor, multiplier: 4/10)
         ])
-
+        
         NSLayoutConstraint.activate([
             textDescription.topAnchor.constraint(equalTo: self.topAnchor),
             textDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),

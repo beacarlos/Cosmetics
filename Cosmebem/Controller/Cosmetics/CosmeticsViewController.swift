@@ -9,78 +9,75 @@
 import UIKit
 
 class CosmeticsViewController: UIViewController {
-    let headerTableView: [String] = ["Blush", "Bronzer", "Eyebrow", "Eyeliner", "Foundation", "Lipstick", "Mascara"]
-    
-    var comestics: [Product] = []
-    
-    func callAPI() {
-        for type in headerTableView {
-            Service.shared.findProductByType(productType: type) { (product) in
-                guard let produt: [Product] = product else {
-                    return
-                }
-                print(produt)
-            }
-        }
-        //        DispatchQueue.main.async {
-        //            self.tableView.reloadData()
-        //        }
-    }
-    
+    let categories: [String] = ["Blush", "Bronzer", "Eyebrow", "Eyeliner", "Foundation", "Lipstick", "Mascara"]
+    let findName: [String] = ["blush", "bronzer", "eyebrow", "eyeliner", "foundation", "lipstick", "mascara"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        callAPI()
-        view.addSubview(CosmeticsView(frame: view.frame))
         setupNavigationController(title: "Cosmetics")
-        self.view.addSubview(tableView)
-        tableView.register(CosmeticsTableViewCell.self, forCellReuseIdentifier: "CosmeticsTableViewCell")
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
-            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
-        ])
+        view.addSubview(CosmeticsView(frame: view.frame))
+        configuretableView()
     }
     
-    lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.backgroundColor = UIColor(red: 0.98, green: 0.94, blue: 0.93, alpha: 1.00)
-        tableView.rowHeight = 200 // Altura de cada linha da table view.
-        tableView.sectionHeaderHeight = 30
+    let table: UITableView = {
+        let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .none
+        tableView.rowHeight = 85
+        tableView.showsVerticalScrollIndicator = false
+        tableView.register(CosmeticsTableViewCell.self, forCellReuseIdentifier: "CosmeticsTableViewCell")
         return tableView
     }()
     
-    func setupNavigationController(title: String, largeTitle: Bool = true) {
-        let searchController = UISearchController(searchResultsController: nil)
+    private func setupNavigationController(title: String, largeTitle: Bool = true) {
         self.title = title
         self.navigationController?.navigationBar.prefersLargeTitles = largeTitle
-        navigationItem.searchController = searchController
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.94, green: 0.80, blue: 0.80, alpha: 1.00)
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0.63, green: 0.49, blue: 0.48, alpha: 1.00)
+        navigationItem.largeTitleDisplayMode = .always
+    }
+    
+    // Set delegates.
+    func configuretableView() {
+        table.delegate = self
+        table.dataSource = self
+        view.addSubview(table)
+        tableViewConstraints()
     }
 }
 
 extension CosmeticsViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = HeaderTableView()
-        header.label.text = headerTableView[section]
-        return header
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return headerTableView.count
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        cell.titleLabel.text = titles[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CosmeticsTableViewCell") as? CosmeticsTableViewCell else {
             return CosmeticsTableViewCell()
         }
+        cell.labelTag = categories[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let destination = DescriptionCosmeticsViewController()
+        destination.tag = categories[indexPath.row]
+        destination.findCategorie = findName[indexPath.row]
+        navigationController?.pushViewController(destination, animated: true)
+    }
+}
+
+extension CosmeticsViewController {
+    func tableViewConstraints() {
+        NSLayoutConstraint.activate([
+            table.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
+            table.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            table.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            table.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
