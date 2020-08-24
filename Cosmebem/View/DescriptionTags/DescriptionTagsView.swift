@@ -44,10 +44,10 @@ class DescriptionTagsView: UIView {
         super.init(frame: frame)
         addSubview(viewDescription)
         viewDescription.addSubview(textDescription)
-        autoLayout()
+        setupConstraints()
     }
     
-    func autoLayout() {
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             viewDescription.topAnchor.constraint(equalTo: self.topAnchor),
             viewDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor),

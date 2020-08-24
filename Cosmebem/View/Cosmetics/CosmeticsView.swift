@@ -38,7 +38,7 @@ class CosmeticsView: UIView {
         viewBackgroundSearchBar(view: viewStatusBar, constant: 170)
     }
     
-    private func autoLayout() {
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             table.topAnchor.constraint(equalTo: self.topAnchor, constant: 200),
             table.leadingAnchor.constraint(equalTo: self.leadingAnchor),

@@ -81,7 +81,7 @@ class DescriptionProductView: UIView {
     
     private func collectionViewLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
-
+        
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
@@ -105,10 +105,10 @@ class DescriptionProductView: UIView {
         addSubview(textDescription)
         addSubview(colorLabel)
         addSubview(collectionView)
-        autoLayout()
+        setupConstraints()
     }
     
-    func autoLayout() {
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             cancelButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             cancelButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16)
@@ -120,31 +120,31 @@ class DescriptionProductView: UIView {
             imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             imageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 3/10)
         ])
-
+        
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 10),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
-
+        
         NSLayoutConstraint.activate([
             brandLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 7),
             brandLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             brandLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
-
+        
         NSLayoutConstraint.activate([
             textDescription.topAnchor.constraint(equalTo: self.brandLabel.bottomAnchor, constant: 7),
             textDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             textDescription.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
-
+        
         NSLayoutConstraint.activate([
             colorLabel.topAnchor.constraint(equalTo: self.textDescription.bottomAnchor, constant: 7),
             colorLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             colorLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
-
+        
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: self.colorLabel.bottomAnchor, constant: 7),
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),

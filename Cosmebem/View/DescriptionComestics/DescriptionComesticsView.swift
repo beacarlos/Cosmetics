@@ -44,10 +44,10 @@ class DescriptionComesticsView: UIView {
         super.init(frame: frame)
         addSubview(viewDescription)
         viewDescription.addSubview(textDescription)
-        autoLayout()
+        setupConstraints()
     }
     
-    private func autoLayout() {
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             viewDescription.topAnchor.constraint(equalTo: self.topAnchor),
             viewDescription.leadingAnchor.constraint(equalTo: self.leadingAnchor),
