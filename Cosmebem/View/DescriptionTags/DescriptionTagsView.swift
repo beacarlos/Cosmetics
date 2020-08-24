@@ -26,7 +26,6 @@ class DescriptionTagsView: UIView {
     
     lazy var textDescription: UITextView = {
         let text = UITextView()
-        text.text = "hgghg"
         text.textColor = .black
         text.isEditable = false
         text.backgroundColor = .none

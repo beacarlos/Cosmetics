@@ -14,8 +14,13 @@ class DescriptionProductViewController: UIViewController {
     
     fileprivate lazy var viewDescriptionProduct: DescriptionProductView =  {
         let view = DescriptionProductView(frame: self.view.frame)
+        view.cancelButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return view
     }()
+    
+    @objc func buttonAction(sender: UIButton!) {
+      dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,8 +16,6 @@ class CosmebemTests: XCTestCase {
         guard let urlMakeupAPI: URL = MakeupAPI(route: Router.brand(brand: "maybelline")).url else {return}
         XCTAssertEqual(url, urlMakeupAPI)
         expect.fulfill()
-        //Async
-        
         wait(for: [expect], timeout: 5)
     }
     
