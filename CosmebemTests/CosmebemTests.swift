@@ -62,4 +62,13 @@ class CosmebemTests: XCTestCase {
         
         wait(for: [expect], timeout: 5)
     }
+    
+    func test_uiColor_hexa_uiColor() {
+        let color = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1.00)
+        let expect = expectation(description: "Color black.")
+        guard let colorBlack: UIColor = UIColor(hex: "#000000") else { return }
+        XCTAssertEqual(color, colorBlack)
+        expect.fulfill()
+        wait(for: [expect], timeout: 5)
+    }
 }
