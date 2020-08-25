@@ -20,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController.navigationBar.tintColor = .white
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        
+        configureForTests()
         return true
-
+        
     }
     
     // MARK: UISceneSession Lifecycle
@@ -34,5 +36,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was
         //not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    private func configureForTests() {
+        if CommandLine.arguments.contains("-reset") {
+            guard let defaultsName = Bundle.main.bundleIdentifier else { return }
+            UserDefaults.standard.removePersistentDomain(forName: defaultsName)
+        }
+        
+        if CommandLine.arguments.contains("-skipOnboarding") {
+            UserDefaults.standard.set(1, forKey: "hasSeenOnboard")
+        }
     }
 }

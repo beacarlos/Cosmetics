@@ -49,6 +49,16 @@
                ReferencedContainer = "container:Cosmebem.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77D4CEBE24F5530B0020EB25"
+               BuildableName = "CosmebemUIT.xctest"
+               BlueprintName = "CosmebemUIT"
+               ReferencedContainer = "container:Cosmebem.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -44,6 +44,8 @@
 		77B8304024EC0E75003E99A8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8303F24EC0E75003E99A8 /* Service.swift */; };
 		77B8304224EC1044003E99A8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B8304124EC1044003E99A8 /* Product.swift */; };
 		77CBBBB724E611C90061CB29 /* TrendingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CBBBB624E611C90061CB29 /* TrendingsCollectionViewCell.swift */; };
+		77D4CEC224F5530B0020EB25 /* CosmebemUIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4CEC124F5530B0020EB25 /* CosmebemUIT.swift */; };
+		77D4CECA24F554990020EB25 /* OnboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4CEC924F554990020EB25 /* OnboardUITests.swift */; };
 		77EB928C24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB928B24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,13 @@
 			remoteInfo = Cosmebem;
 		};
 		77A287F624E573D8009A3B46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77A287CC24E573D6009A3B46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77A287D324E573D6009A3B46;
+			remoteInfo = Cosmebem;
+		};
+		77D4CEC424F5530B0020EB25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 77A287CC24E573D6009A3B46 /* Project object */;
 			proxyType = 1;
@@ -108,6 +117,10 @@
 		77B8303F24EC0E75003E99A8 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		77B8304124EC1044003E99A8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		77CBBBB624E611C90061CB29 /* TrendingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingsCollectionViewCell.swift; sourceTree = "<group>"; };
+		77D4CEBF24F5530B0020EB25 /* CosmebemUIT.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CosmebemUIT.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D4CEC124F5530B0020EB25 /* CosmebemUIT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmebemUIT.swift; sourceTree = "<group>"; };
+		77D4CEC324F5530B0020EB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77D4CEC924F554990020EB25 /* OnboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardUITests.swift; sourceTree = "<group>"; };
 		77EB928B24F2E41B00CF5F10 /* CatgeoriesCosmetics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatgeoriesCosmetics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +140,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		77A287F224E573D8009A3B46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D4CEBC24F5530B0020EB25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,6 +248,7 @@
 				77A287D624E573D6009A3B46 /* Cosmebem */,
 				77A287ED24E573D8009A3B46 /* CosmebemTests */,
 				77A287F824E573D8009A3B46 /* CosmebemUITests */,
+				77D4CEC024F5530B0020EB25 /* CosmebemUIT */,
 				77A287D524E573D6009A3B46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -238,6 +259,7 @@
 				77A287D424E573D6009A3B46 /* Cosmebem.app */,
 				77A287EA24E573D8009A3B46 /* CosmebemTests.xctest */,
 				77A287F524E573D8009A3B46 /* CosmebemUITests.xctest */,
+				77D4CEBF24F5530B0020EB25 /* CosmebemUIT.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -394,6 +416,16 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		77D4CEC024F5530B0020EB25 /* CosmebemUIT */ = {
+			isa = PBXGroup;
+			children = (
+				77D4CEC124F5530B0020EB25 /* CosmebemUIT.swift */,
+				77D4CEC324F5530B0020EB25 /* Info.plist */,
+				77D4CEC924F554990020EB25 /* OnboardUITests.swift */,
+			);
+			path = CosmebemUIT;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -451,6 +483,24 @@
 			productReference = 77A287F524E573D8009A3B46 /* CosmebemUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		77D4CEBE24F5530B0020EB25 /* CosmebemUIT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77D4CEC824F5530B0020EB25 /* Build configuration list for PBXNativeTarget "CosmebemUIT" */;
+			buildPhases = (
+				77D4CEBB24F5530B0020EB25 /* Sources */,
+				77D4CEBC24F5530B0020EB25 /* Frameworks */,
+				77D4CEBD24F5530B0020EB25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77D4CEC524F5530B0020EB25 /* PBXTargetDependency */,
+			);
+			name = CosmebemUIT;
+			productName = CosmebemUIT;
+			productReference = 77D4CEBF24F5530B0020EB25 /* CosmebemUIT.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -472,6 +522,10 @@
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = 77A287D324E573D6009A3B46;
 					};
+					77D4CEBE24F5530B0020EB25 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 77A287D324E573D6009A3B46;
+					};
 				};
 			};
 			buildConfigurationList = 77A287CF24E573D6009A3B46 /* Build configuration list for PBXProject "Cosmebem" */;
@@ -490,6 +544,7 @@
 				77A287D324E573D6009A3B46 /* Cosmebem */,
 				77A287E924E573D8009A3B46 /* CosmebemTests */,
 				77A287F424E573D8009A3B46 /* CosmebemUITests */,
+				77D4CEBE24F5530B0020EB25 /* CosmebemUIT */,
 			);
 		};
 /* End PBXProject section */
@@ -513,6 +568,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		77A287F324E573D8009A3B46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D4CEBD24F5530B0020EB25 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -598,6 +660,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77D4CEBB24F5530B0020EB25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D4CEC224F5530B0020EB25 /* CosmebemUIT.swift in Sources */,
+				77D4CECA24F554990020EB25 /* OnboardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -610,6 +681,11 @@
 			isa = PBXTargetDependency;
 			target = 77A287D324E573D6009A3B46 /* Cosmebem */;
 			targetProxy = 77A287F624E573D8009A3B46 /* PBXContainerItemProxy */;
+		};
+		77D4CEC524F5530B0020EB25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77A287D324E573D6009A3B46 /* Cosmebem */;
+			targetProxy = 77D4CEC424F5530B0020EB25 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -859,6 +935,44 @@
 			};
 			name = Release;
 		};
+		77D4CEC624F5530B0020EB25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VH525588L5;
+				INFOPLIST_FILE = CosmebemUIT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = beatrizcarlos.dev.CosmebemUIT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cosmebem;
+			};
+			name = Debug;
+		};
+		77D4CEC724F5530B0020EB25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VH525588L5;
+				INFOPLIST_FILE = CosmebemUIT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = beatrizcarlos.dev.CosmebemUIT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cosmebem;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -894,6 +1008,15 @@
 			buildConfigurations = (
 				77A2880524E573D8009A3B46 /* Debug */,
 				77A2880624E573D8009A3B46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77D4CEC824F5530B0020EB25 /* Build configuration list for PBXNativeTarget "CosmebemUIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D4CEC624F5530B0020EB25 /* Debug */,
+				77D4CEC724F5530B0020EB25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

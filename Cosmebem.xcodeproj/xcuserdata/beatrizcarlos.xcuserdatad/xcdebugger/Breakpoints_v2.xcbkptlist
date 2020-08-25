@@ -3,4 +3,115 @@
    uuid = "3485DEA1-20B7-467A-8386-915927DFBCB7"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE9B00AE-7F40-49FB-9F89-DD3D39184348"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cosmebem/Config/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "AE9B00AE-7F40-49FB-9F89-DD3D39184348 - f4c004953c24e8de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cosmebem.AppDelegate.window.getter : Swift.Optional&lt;__C.UIWindow&gt;"
+                  moduleName = "Cosmebem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beatrizcarlos/Documents/Cosmetis/app/Cosmetics/Cosmebem/Config/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "AE9B00AE-7F40-49FB-9F89-DD3D39184348 - efb726255481f8a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cosmebem.AppDelegate.window.setter : Swift.Optional&lt;__C.UIWindow&gt;"
+                  moduleName = "Cosmebem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beatrizcarlos/Documents/Cosmetis/app/Cosmetics/Cosmebem/Config/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "AE9B00AE-7F40-49FB-9F89-DD3D39184348 - 94cbf95bba621cd7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cosmebem.AppDelegate.window.modify : Swift.Optional&lt;__C.UIWindow&gt;"
+                  moduleName = "Cosmebem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beatrizcarlos/Documents/Cosmetis/app/Cosmetics/Cosmebem/Config/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "AE9B00AE-7F40-49FB-9F89-DD3D39184348 - 88b643009af579fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cosmebem.AppDelegate.window.modify : Swift.Optional&lt;__C.UIWindow&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Cosmebem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beatrizcarlos/Documents/Cosmetis/app/Cosmetics/Cosmebem/Config/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "AE9B00AE-7F40-49FB-9F89-DD3D39184348 - 41403d6e1352fbc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cosmebem.AppDelegate.init() -&gt; Cosmebem.AppDelegate"
+                  moduleName = "Cosmebem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/beatrizcarlos/Documents/Cosmetis/app/Cosmetics/Cosmebem/Config/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28227979-572C-4B05-9E8D-B4CB1E2B408D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CosmebemUIT/OnboardUITests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "OnboardUITests"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
