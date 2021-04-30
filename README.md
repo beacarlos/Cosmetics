@@ -2,6 +2,7 @@
 <h1 align="center">Welcome to Cosmetics 👋</h1>
 
 > IOS application that purpose to optimize the recommendation of cosmetics.
+
 ![image](https://user-images.githubusercontent.com/32069720/116700389-1ad41b80-a99d-11eb-96c5-2b1d7d8b1268.png)
 
 ## Authors
